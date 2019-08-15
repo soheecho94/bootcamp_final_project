@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap');
+
+body {
+  cursor: url(../assets/pen.png), auto;
+  background-image: url(../assets/self-portrait_2.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Beth Ellen', cursive;
+  text-align: center;
+  margin-top: 17%;
+}
+
+canvas {
+  margin: 0;
+  z-index: 1;
+  visibility: visible;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 33px;
+  height: 15px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 1.75px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* font color change animation */
+@keyframes color-change {
+    0% { color: black; }
+    50% { color : white; }
+    100% { color: black; }
+}
+
+.new-animation {
+  animation: color-change 2s infinite;
+}
+
+/* a tag css */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: black;
+  text-decoration: none;
+}
